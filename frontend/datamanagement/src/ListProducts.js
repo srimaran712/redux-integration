@@ -19,12 +19,13 @@ function ListProducts() {
         </div>
 
 
-        <div className="w-full mt-4">
+        <div className="w-full mt-2 flex flex-col items-center">
           {listItems.aboutForm.length>0?(listItems.aboutForm.map((items,ind)=>{
             return(
-              <div key={ind}>
-                <img src={items.photos[0]} alt={items.productName}/>
-                <h3>{items.productName}</h3>
+              <div key={ind} className="my-2 py-1">
+                <img src={items.photos[0]} alt={items.productName} style={{width:"350px",height:"250px"}}/>
+                <div className="flex items-center justify-between">
+                <h3 className="text-gray-600 font-semibold mt-1 text-lg">{items.productName}</h3><h3 className="font-bold text-md ">$ {items.price}</h3></div>
               </div>
             )
           })):<h3> no products</h3>}
