@@ -12,11 +12,11 @@ const dataSlice= createSlice({
             photos:[],
             price:0.0
         }],
-        AdditionalForm:{
+        AdditionalForm:[{
             benefits:[],
             details:[{ attribute: '', value: '' }],
             category:''
-        }
+        }]
     },
     reducers:{
         aboutform:(state,action)=>{
